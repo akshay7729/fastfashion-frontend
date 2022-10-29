@@ -23,7 +23,7 @@ const SearchBox = () => {
           type="search"
           id="search"
           className="px-4 py-2 pl-10 w-full min-w-500 text-gray-700 rounded-full border border-gray-200 focus:border-gray-400 outline-none bg-gray-100"
-          placeholder="Search Clothes"
+          placeholder="Search for clothes, brands and more"
         />
       </div>
     </form>
