@@ -1,11 +1,12 @@
 import SearchBox from "./Searchbox";
 import RightMenu from "./RightMenu";
+import Logo from "./Logo";
 
 const Navbar = () => {
   return (
-    <nav className="relative container border-b-2 border-indigo-500 mx-auto px-6 py-4">
+    <nav className="relative container mx-auto px-6 py-4 text-white">
       <div className="flex items-center justify-between">
-        <div>Fast Fashion</div>
+        <Logo />
         <div className="hidden md:flex">
           <SearchBox />
         </div>
