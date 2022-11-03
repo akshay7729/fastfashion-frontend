@@ -17,7 +17,7 @@ module.exports = {
     extend: {
       colors: {
         ffBlack: "#3b3441",
-        ffPurple: "#7532de",
+        ffPrimaryColor: "#504eb6",
         ffDarkPurple: "#4f0db7",
         ffLightBlue: "#127ace",
       },
