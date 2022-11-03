@@ -1,5 +1,6 @@
 import { UserOutlined } from "@ant-design/icons";
 import { Fragment, useState } from "react";
+import LoginSection from "../Login";
 
 const UserDropdown = () => {
   const [showModal, setShowModal] = useState(false);
@@ -31,7 +32,7 @@ const UserDropdown = () => {
           {/* Modal Header */}
           <button
             type="button"
-            className="absolute right-0 top-0 text-gray-400 bg-transparent hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+            className="absolute cursor-pointer right-0 top-0 text-gray-400 bg-transparent hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center z-40"
             data-modal-toggle="defaultModal"
             onClick={() => setShowModal(false)}
           >
@@ -53,10 +54,13 @@ const UserDropdown = () => {
           {/* modal body */}
           <div className="relative flex w-full min-h-[200px]">
             <div className="flex-1">
-              <div className="bg-[rgba(0,0,0,0.5)] w-[50%] h-full absolute"></div>
+              <div className="bg-[rgba(0,0,0,0.5)] h-full absolute -z-50"></div>
               <img src="./img/8.jpg" />
             </div>
-            <div className="flex-1">2</div>
+            {/* Login Section */}
+            <div className="flex-1">
+              <LoginSection />
+            </div>
           </div>
         </div>
       </div>

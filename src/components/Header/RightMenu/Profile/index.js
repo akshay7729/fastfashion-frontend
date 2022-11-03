@@ -3,7 +3,7 @@ import {
   HeartOutlined,
   ShoppingCartOutlined,
 } from "@ant-design/icons";
-import UserDropdown from "./userDropdown";
+import UserDropdown from "./UserDropdown";
 
 const Profile = () => {
   return (
