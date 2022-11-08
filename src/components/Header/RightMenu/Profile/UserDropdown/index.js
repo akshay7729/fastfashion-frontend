@@ -1,6 +1,8 @@
 import { UserOutlined } from "@ant-design/icons";
 import { Fragment, useState } from "react";
 import LoginSection from "../Login";
+import Image from "next/image";
+import SignUpSection from "../SignUp";
 
 const UserDropdown = () => {
   const [showModal, setShowModal] = useState(false);
@@ -55,11 +57,18 @@ const UserDropdown = () => {
           <div className="relative flex w-full min-h-[200px]">
             <div className="flex-1">
               <div className="bg-[rgba(0,0,0,0.5)] h-full absolute -z-50"></div>
-              <img src="./img/8.jpg" />
+              <Image
+                className="w-full h-full"
+                width={500}
+                height={500}
+                src="/img/12.png"
+                alt="Profile"
+              />
             </div>
             {/* Login Section */}
             <div className="flex-1">
-              <LoginSection />
+              {/* <LoginSection /> */}
+              <SignUpSection />
             </div>
           </div>
         </div>
