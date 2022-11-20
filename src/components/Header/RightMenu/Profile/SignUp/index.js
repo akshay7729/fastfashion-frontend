@@ -1,5 +1,6 @@
 import { MailOutlined, LockOutlined, UserOutlined } from "@ant-design/icons";
 import Logo from "../../../Logo";
+import { v4 as uuidv4 } from "uuid";
 
 const SignUpSection = () => {
   return (
@@ -14,7 +15,20 @@ const SignUpSection = () => {
           />
         </div>
         <input
-          type="email"
+          type="string"
+          placeholder="Enter Username"
+          className="form-control block w-full px-4 py-2 pl-10 font-normal text-gray-700 border-2 border-ffPrimaryColor rounded"
+        />
+      </div>
+      <div className="w-full">
+        <div className="absolute ml-3 mt-[7px]">
+          <UserOutlined
+            className="text-ffPrimaryColor"
+            style={{ fontSize: "20px" }}
+          />
+        </div>
+        <input
+          type="string"
           placeholder="Enter Firstname"
           className="form-control block w-full px-4 py-2 pl-10 font-normal text-gray-700 border-2 border-ffPrimaryColor rounded"
         />
@@ -27,7 +41,7 @@ const SignUpSection = () => {
           />
         </div>
         <input
-          type="email"
+          type="string"
           placeholder="Enter Lastname"
           className="form-control block w-full px-4 py-2 pl-10 font-normal text-gray-700 border-2 border-ffPrimaryColor rounded"
         />
@@ -64,7 +78,8 @@ const SignUpSection = () => {
       <br />
       <br />
       <p>
-        Already have an Account? <button>Log in</button>
+        Already have an Account?{" "}
+        <button className="text-ffPrimaryColor">Log in</button>
       </p>
     </div>
   );

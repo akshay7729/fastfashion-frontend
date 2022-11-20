@@ -61,7 +61,7 @@ const UserDropdown = () => {
                 className="w-full h-full"
                 width={500}
                 height={500}
-                src="/img/12.png"
+                src="/img/10.jpg"
                 alt="Profile"
               />
             </div>
