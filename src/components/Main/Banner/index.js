@@ -24,10 +24,10 @@ const Banner = () => {
         <div className="overflow-visible">
           <Image
             className="w-[100%]"
-            src="/img/nikeBanner.png"
+            src="/img/17.png"
             alt="Banner"
-            width={100}
-            height={100}
+            width={500}
+            height={500}
           />
         </div>
       </div>

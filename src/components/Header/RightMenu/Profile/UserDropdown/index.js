@@ -9,7 +9,7 @@ const UserDropdown = () => {
   return (
     <Fragment>
       <button
-        className="flex flex-col items-center gap-1"
+        className="flex flex-col items-center gap-1 text-black"
         onClick={() => setShowModal(true)}
       >
         <div>
@@ -25,7 +25,7 @@ const UserDropdown = () => {
         className={`${
           showModal ? "" : "hidden"
         } fixed bg-[rgba(31,32,41,.85)] top-0 bottom-0 left-0 right-0
-                  overflow-x-hidden overflow-y-auto flex items-center justify-center     
+                  overflow-x-hidden overflow-y-auto flex items-center justify-center z-10     
                 `}
       >
         <div

@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className="relative mx-auto px-6 py-4 text-white">
       <div className="flex items-center justify-between">
-        <Logo size="35px" />
+        <Logo size="35px" color="black" />
         <div className="hidden md:flex">
           <SearchBox />
         </div>
