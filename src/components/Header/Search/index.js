@@ -22,7 +22,7 @@ const SearchBox = () => {
         <input
           type="search"
           id="search"
-          className="px-4 py-2 pl-10 w-full lg:min-w-500 text-gray-700 rounded-full border border-gray-200 focus:border-gray-400 outline-none bg-gray-100"
+          className="px-4 py-2 pl-10 w-full lg:min-w-500 text-gray-700 rounded-full border border-gray-400 focus:border-gray-400 outline-none bg-gray-100"
           placeholder="Search for clothes, shoes and more"
           autoComplete="off"
         />

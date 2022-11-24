@@ -9,13 +9,19 @@ const RightMenu = () => {
   return (
     <div className="flex gap-3 items-center">
       <div>
-        <InstagramFilled className="text-black" style={{ fontSize: "20px" }} />
+        <InstagramFilled
+          className="text-ffBlack"
+          style={{ fontSize: "20px" }}
+        />
       </div>
       <div>
-        <TwitterOutlined className="text-black" style={{ fontSize: "22px" }} />
+        <TwitterOutlined
+          className="text-ffBlack"
+          style={{ fontSize: "22px" }}
+        />
       </div>
       <div>
-        <YoutubeFilled className="text-black" style={{ fontSize: "22px" }} />
+        <YoutubeFilled className="text-ffBlack" style={{ fontSize: "22px" }} />
       </div>
       <div className="ml-10">
         <Profile />

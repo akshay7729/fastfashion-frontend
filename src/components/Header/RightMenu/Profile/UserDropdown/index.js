@@ -9,7 +9,7 @@ const UserDropdown = () => {
   return (
     <Fragment>
       <button
-        className="flex flex-col items-center gap-1 text-black"
+        className="flex flex-col items-center gap-1 text-ffBlack"
         onClick={() => setShowModal(true)}
       >
         <div>
@@ -29,7 +29,7 @@ const UserDropdown = () => {
                 `}
       >
         <div
-          className={`relative flex w-full bg-white items-center text-black max-w-[50%] rounded-lg`}
+          className={`relative flex w-full bg-white items-center text-ffBlack max-w-[50%] rounded-lg`}
         >
           {/* Modal Header */}
           <button

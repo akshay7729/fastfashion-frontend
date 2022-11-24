@@ -13,7 +13,7 @@ const Modal = ({ active }) => {
                 `}
     >
       <div
-        className={`relative flex w-full bg-white items-center text-black max-w-[50%] rounded-lg min-h-[20%]`}
+        className={`relative flex w-full bg-white items-center text-ffBlack max-w-[50%] rounded-lg min-h-[20%]`}
       >
         {/* Modal Header */}
         <button
