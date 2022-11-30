@@ -32,8 +32,6 @@ const SignUpSection = () => {
     }
   `;
 
-  // const getUsername = useCallback(_debounce(setSignUpdate(["hello"])), []);
-
   const handleSignup = () => {
     if (username && firstName && lastName && email && password && phone) {
       const emailRegex =
@@ -70,57 +68,48 @@ const SignUpSection = () => {
 
   return (
     <div className="px-8 py-10 flex flex-col justify-center h-full items-center gap-5">
-      <Logo size="35px" color="ffPrimaryColor" />
-      <p className="mb-10 text-xl text-ffPrimaryColor">Create an account</p>
+      <Logo size="35px" color="ffBlack" />
+      <p className="mb-10 text-xl text-ffBlack">Create an account</p>
       <div className="w-full">
         <div className="absolute ml-3 mt-[7px]">
-          <UserOutlined
-            className="text-ffPrimaryColor"
-            style={{ fontSize: "20px" }}
-          />
+          <UserOutlined className="text-ffBlack" style={{ fontSize: "20px" }} />
         </div>
         <input
           type="string"
           placeholder="Enter Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          className="form-control block w-full px-4 py-2 pl-10 font-normal text-gray-700 border-2 border-ffPrimaryColor rounded"
+          className="form-control block w-full px-4 py-2 pl-10 font-normal text-gray-700 border-2 border-ffBlack rounded"
         />
       </div>
       <div className="w-full">
         <div className="absolute ml-3 mt-[7px]">
-          <UserOutlined
-            className="text-ffPrimaryColor"
-            style={{ fontSize: "20px" }}
-          />
+          <UserOutlined className="text-ffBlack" style={{ fontSize: "20px" }} />
         </div>
         <input
           type="string"
           placeholder="Enter Firstname"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
-          className="form-control block w-full px-4 py-2 pl-10 font-normal text-gray-700 border-2 border-ffPrimaryColor rounded"
+          className="form-control block w-full px-4 py-2 pl-10 font-normal text-gray-700 border-2 border-ffBlack rounded"
         />
       </div>
       <div className="w-full">
         <div className="absolute ml-3 mt-[7px]">
-          <UserOutlined
-            className="text-ffPrimaryColor"
-            style={{ fontSize: "20px" }}
-          />
+          <UserOutlined className="text-ffBlack" style={{ fontSize: "20px" }} />
         </div>
         <input
           type="string"
           placeholder="Enter Lastname"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
-          className="form-control block w-full px-4 py-2 pl-10 font-normal text-gray-700 border-2 border-ffPrimaryColor rounded"
+          className="form-control block w-full px-4 py-2 pl-10 font-normal text-gray-700 border-2 border-ffBlack rounded"
         />
       </div>
       <div className="w-full">
         <div className="absolute ml-3 mt-[7px]">
           <MobileOutlined
-            className="text-ffPrimaryColor"
+            className="text-ffBlack"
             style={{ fontSize: "20px" }}
           />
         </div>
@@ -129,41 +118,35 @@ const SignUpSection = () => {
           placeholder="Mobile"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-          className="form-control block w-full px-4 py-2 pl-10 font-normal text-gray-700 border-2 border-ffPrimaryColor rounded"
+          className="form-control block w-full px-4 py-2 pl-10 font-normal text-gray-700 border-2 border-ffBlack rounded"
         />
       </div>
       <div className="w-full">
         <div className="absolute ml-3 mt-[7px]">
-          <MailOutlined
-            className="text-ffPrimaryColor"
-            style={{ fontSize: "20px" }}
-          />
+          <MailOutlined className="text-ffBlack" style={{ fontSize: "20px" }} />
         </div>
         <input
           type="email"
           placeholder="Enter email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="form-control block w-full px-4 py-2 pl-10 font-normal text-gray-700 border-2 border-ffPrimaryColor rounded"
+          className="form-control block w-full px-4 py-2 pl-10 font-normal text-gray-700 border-2 border-ffBlack rounded"
         />
       </div>
       <div className="w-full">
         <div className="absolute ml-3 mt-[7px]">
-          <LockOutlined
-            className="text-ffPrimaryColor"
-            style={{ fontSize: "20px" }}
-          />
+          <LockOutlined className="text-ffBlack" style={{ fontSize: "20px" }} />
         </div>
         <input
           type="password"
           placeholder="Enter password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="form-control block w-full px-4 py-2 pl-10 font-normal text-gray-700 border-2 border-ffPrimaryColor rounded"
+          className="form-control block w-full px-4 py-2 pl-10 font-normal text-gray-700 border-2 border-ffBlack rounded"
         />
       </div>
       <button
-        className="border px-12 hover:px-14 py-2 cursor-pointer bg-ffPrimaryColor rounded-md text-white ease-in duration-300"
+        className="border px-12 hover:px-14 py-2 cursor-pointer bg-ffBlack rounded-md text-white ease-in duration-300"
         onClick={() => handleSignup()}
       >
         Sign Up
@@ -172,7 +155,7 @@ const SignUpSection = () => {
       <br />
       <p>
         Already have an Account?{" "}
-        <button className="text-ffPrimaryColor">Log in</button>
+        <button className="text-ffBlack">Log in</button>
       </p>
     </div>
   );
