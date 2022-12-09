@@ -67,8 +67,8 @@ const UserDropdown = () => {
             </div>
             {/* Login Section */}
             <div className="flex-1">
-              {/* <LoginSection /> */}
-              <SignUpSection />
+              <LoginSection />
+              {/* <SignUpSection /> */}
             </div>
           </div>
         </div>

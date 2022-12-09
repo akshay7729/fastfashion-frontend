@@ -1,4 +1,7 @@
-const SearchBox = () => {
+import { gql, useQuery } from "@apollo/client";
+
+const SearchBox = ({ search }) => {
+  console.log("search", search);
   return (
     <form>
       <div className="relative">
