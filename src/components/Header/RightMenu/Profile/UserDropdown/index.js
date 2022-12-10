@@ -3,8 +3,15 @@ import { Fragment, useState } from "react";
 import LoginSection from "../Login";
 import Image from "next/image";
 import SignUpSection from "../SignUp";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const UserDropdown = () => {
+  const { data: session } = useSession();
+
+  if (session) {
+    console.log("session", session);
+  }
+
   const [showModal, setShowModal] = useState(false);
   return (
     <Fragment>
@@ -13,9 +20,20 @@ const UserDropdown = () => {
         onClick={() => setShowModal(true)}
       >
         <div>
-          <UserOutlined style={{ fontSize: "20px" }} />
+          {session ? (
+            <img
+              className="rounded-full"
+              width="25"
+              src={session.user.image}
+              alt="Profile Img"
+            />
+          ) : (
+            <UserOutlined style={{ fontSize: "20px" }} />
+          )}
         </div>
-        <div className="text-xs">Profile</div>
+        <div className="text-xs">
+          {session ? `Hi ${session.user.name.split(" ")[0]}` : "Log In"}
+        </div>
       </button>
 
       {/* if not logged in */}

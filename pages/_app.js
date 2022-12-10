@@ -8,6 +8,7 @@ import {
   ApolloProvider,
 } from "@apollo/client";
 import { onError } from "@apollo/client/link/error";
+import { SessionProvider } from "next-auth/react";
 
 const onErrorLink = onError(({ graphQLErrors, networkError }) => {
   if (graphQLErrors) {
@@ -26,11 +27,13 @@ const client = new ApolloClient({
   link: link,
 });
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
-    <ApolloProvider client={client}>
-      <Component {...pageProps} />
-    </ApolloProvider>
+    <SessionProvider session={session}>
+      <ApolloProvider client={client}>
+        <Component {...pageProps} />
+      </ApolloProvider>
+    </SessionProvider>
   );
 }
 

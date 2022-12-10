@@ -2,11 +2,16 @@ import { MailOutlined, LockOutlined, HeatMapOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import Logo from "../../../Logo";
 import axios from "axios";
+import { useSession, signIn, signOut } from "next-auth/react";
+import Image from "next/image";
 
 const LoginSection = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const { data: session } = useSession();
+
+  console.log("login session", session);
 
   const handleLogin = () => {
     const emailRegex =
@@ -76,6 +81,21 @@ const LoginSection = () => {
       >
         Login
       </button>
+      {session ? "" : <p>OR</p>}
+      {session ? "" : <p>Sign In using following</p>}
+      {session ? (
+        <button onClick={() => signOut()}>Sign Out</button>
+      ) : (
+        <button onClick={() => signIn()}>
+          <Image
+            className="w-[50px] h-full"
+            width={100}
+            height={100}
+            src="/img/logos/google.png"
+            alt="Login from Google"
+          />
+        </button>
+      )}
     </div>
   );
 };
