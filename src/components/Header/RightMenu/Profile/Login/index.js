@@ -4,6 +4,7 @@ import Logo from "../../../Logo";
 import axios from "axios";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
+import FacebookLogin from "react-facebook-login";
 
 const LoginSection = () => {
   const [email, setEmail] = useState("");
@@ -46,6 +47,14 @@ const LoginSection = () => {
     console.log("password", password);
   };
 
+  const responseFacebook = (response) => {
+    console.log("fb response".response);
+  };
+
+  const componentClicked = () => {
+    console.log("component clicked");
+  };
+
   return (
     <div className="px-8 py-10 flex flex-col justify-center h-full items-center gap-5">
       {/* <HeatMapOutlined className="text-ffBlack" style={{ fontSize: "35px" }} /> */}
@@ -83,19 +92,32 @@ const LoginSection = () => {
       </button>
       {session ? "" : <p>OR</p>}
       {session ? "" : <p>Sign In using following</p>}
-      {session ? (
-        <button onClick={() => signOut()}>Sign Out</button>
-      ) : (
-        <button onClick={() => signIn()}>
-          <Image
-            className="w-[50px] h-full"
-            width={100}
-            height={100}
-            src="/img/logos/google.png"
-            alt="Login from Google"
+      <div className="flex gap-4 text-center">
+        <div>
+          {session ? (
+            <button onClick={() => signOut()}>Sign Out</button>
+          ) : (
+            <button onClick={() => signIn()}>
+              <Image
+                className="w-[50px] h-full"
+                width={100}
+                height={100}
+                src="/img/logos/google.png"
+                alt="Login from Google"
+              />
+            </button>
+          )}
+        </div>
+        {/* <div>
+          <FacebookLogin
+            appId="715038016512592"
+            autoLoad={true}
+            fields="name,email,picture"
+            onClick={componentClicked}
+            callback={responseFacebook}
           />
-        </button>
-      )}
+        </div> */}
+      </div>
     </div>
   );
 };

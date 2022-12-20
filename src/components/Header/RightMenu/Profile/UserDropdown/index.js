@@ -1,9 +1,10 @@
-import { UserOutlined } from "@ant-design/icons";
+import { UserOutlined, DownOutlined, LogoutOutlined } from "@ant-design/icons";
 import { Fragment, useState } from "react";
 import LoginSection from "../Login";
 import Image from "next/image";
 import SignUpSection from "../SignUp";
 import { useSession, signIn, signOut } from "next-auth/react";
+import Link from "next/link";
 
 const UserDropdown = () => {
   const { data: session } = useSession();
@@ -15,7 +16,41 @@ const UserDropdown = () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <Fragment>
-      <button
+      {session ? (
+        <div className="group cursor-pointer">
+          <div className="grid justify-items-center gap-1">
+            <img
+              className="rounded-full"
+              width="25"
+              src={session.user.image}
+              alt="Profile Img"
+            />
+            <div className="text-ffBlack text-xs">
+              Hi {session.user.name.split(" ")[0]}
+            </div>
+          </div>
+          <div className="absolute hidden group-hover:block bg-white z-100 text-ffBlack p-6 gap-4">
+            <ul>
+              <li>Orders</li>
+              <li>Wishlist</li>
+              <li>Gift Cards</li>
+              <li>Contact Us</li>
+              <li>
+                <button onClick={() => signOut()}>Log Out</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      ) : (
+        <button
+          className="flex flex-col items-center gap-1 text-ffBlack"
+          onClick={() => setShowModal(true)}
+        >
+          <UserOutlined style={{ fontSize: "20px" }} />
+          <div className="text-xs">Log In</div>
+        </button>
+      )}
+      {/* <button
         className="flex flex-col items-center gap-1 text-ffBlack"
         onClick={() => setShowModal(true)}
       >
@@ -34,7 +69,7 @@ const UserDropdown = () => {
         <div className="text-xs">
           {session ? `Hi ${session.user.name.split(" ")[0]}` : "Log In"}
         </div>
-      </button>
+      </button> */}
 
       {/* if not logged in */}
       <div
